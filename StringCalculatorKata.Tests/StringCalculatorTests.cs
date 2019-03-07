@@ -20,22 +20,6 @@ namespace StringCalculatorKata.Tests
             Assert.Equal(0, result);
         }
 
-        [Fact]
-        public void Add_Returns_1_For_1()
-        {
-            var result = underTest.Add("1");
-
-            Assert.Equal(1, result);
-        }
-
-        [Fact]
-        public void Add_Returns_2_For_2()
-        {
-            var result = underTest.Add("2");
-
-            Assert.Equal(2, result);
-        }
-
         [Theory]
         [InlineData("1", 1)]
         [InlineData("2", 2)]
@@ -45,5 +29,21 @@ namespace StringCalculatorKata.Tests
 
             Assert.Equal(expected, result);
         }
+
+        [Fact]
+        public void Add_Returns_Two_Numbers()
+        {
+            var result = underTest.Add("1,2");
+            
+        }
+
+        //[Theory]
+        //[InlineData("1,1", 2)]
+        //public void Add_Two_Numbers_Returns_Correct_Sum(string input, int expected)
+        //{
+        //    var result = underTest.Add(input);
+
+        //    Assert.Equal(expected, result);
+        //}
     }
 }
